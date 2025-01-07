@@ -32,15 +32,25 @@ else:
 # sum of prime digits in the number
 num=input("Enter a number: ")
 sum=0
+primestr=""
 def primenum(n):
     if n>1:
-       for i in range(2,10):
-        if (n%i==0):
+       for i in range(2,(n//2)+1):
+          if (n%i==0):
             return False
-        return True
+       return True
     return False
 
 for i in num:
     if(primenum(int(i))):
-        sum+=int(i)
-print(sum)
+        primestr+=i
+# print(primestr)
+minprime,maxprime=int(primestr[0]),int(primestr[0])
+for i in primestr:
+   if(int(i)>maxprime):
+      maxprime=int(i)
+   elif(int(i)<minprime):
+      minprime=int(i)
+print("The min prime digit in the number is",minprime)
+print("The max prime digit in the number is",maxprime)
+print("The sum of max_prime and min_prime is",(maxprime+minprime))
