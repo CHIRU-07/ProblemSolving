@@ -29,7 +29,7 @@ else:
         print(leftPrime,"is nearest prime Number")
     print(RightPrime,":is nearest prime Number")"""
 
-# sum of prime digits in the number
+# sum of max and min prime digits in the number
 num=input("Enter a number: ")
 sum=0
 primestr=""
