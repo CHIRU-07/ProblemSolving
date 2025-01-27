@@ -7,7 +7,7 @@
 # Output:
 # 2
 
-str=input("Enter a string: ")
+'''str=input("Enter a string: ")
 substr=input("Enter a substring: ")
 count,i,j=0,0,0
 while i<=(len(str)-1):
@@ -24,5 +24,16 @@ while i<=(len(str)-1):
     else:
         i+=1
         j=0
-print(f" \"{substr}\" occurs {count} times in \"{str}\"")
+print(f"\"{substr}\" occurs {count} times in \"{str}\"")'''
+
+
+# Method 2 
+str1=input("Enter the string: ")
+substr1=input("Enter the substring: ")
+count=0
+for i in range(0,len(str1)):
+    if(str1[i]==substr1[0]):
+        if(str1[i:i+len(str1)]==substr1):
+            count+=1
+print(count)
         
